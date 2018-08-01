@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Find Places &amp; Things to Do!</title>
+</head>
+
+<body>
+  <div class="video-container">
+    <header class="video-header">
+      <div class="video-wrapper">
+        <video poster="assets/img/bg-video-poster.jpg" autoplay='true' loop="true">
+          <source src="assets/video/bg-video.mp4" type="video/mp4">
+          <source src="assets/video/bg-video.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="video-header-overlay"></div>
+      <div class="video-header-content">
+        <div class="heading">
+          <div class="icon">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </div>
+          <h1>Find Places &amp; Things to Do!</h1>
+        </div>
+        <div class="form-wrapper">
+          <form class="js-search-form">
+            <label for="location">Enter Location:</label>
+            <input type="text" id="location" class="location-search" name="location" placeholder="Zipcode, city, intersection..." size="10"
+              required>
+            <label for="search-term">What are you looking for?</label>
+            <input type="text" id="search-term" class="search-term" name="search-term" placeholder="Museums, parks, music, food..." size="10"
+              required>
+            <button id="btn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+  </div>
+  <main class="results-wrapper" id="results">
+    <div class="weather-wrapper"></div>
+    <div class="js-search-results" role="main" aria-live="assertive" hidden></div>
+  </main>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIsTyy6HE7oIGzLFRjQca-qkh7UScATZ4&libraries=places"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

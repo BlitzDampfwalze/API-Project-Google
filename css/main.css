@@ -1,0 +1,191 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #6d6e75;
+  color: #ffffff;
+}
+
+a {
+  color: #00bcd4;
+  display: block;
+}
+
+span {
+  display: inline;
+}
+
+.video-header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-wrapper > video {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.video-header-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #2a2b30;
+  opacity: 0.65;
+}
+
+.video-header-content {
+  z-index: 2;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  padding-top: 3em;
+}
+
+.heading h1 {
+  font-size: 3.5em;
+  margin-bottom: 1em;
+}
+
+.icon {
+  margin-right: 0.5em;
+  font-size: 4em;
+}
+
+.form-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.js-search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.js-search-form > * {
+  margin: 0.5em 0;
+  border-radius: 50px;
+}
+
+.js-search-form > label {
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.js-search-form > input {
+  background-color: #eee;
+  padding: 0.7em 2em;
+}
+
+::placeholder {
+  color: #53535a8c;
+  font-size: 0.8em;
+}
+
+.js-search-form > button {
+  background-color: #5f5f88;
+  color: #f9ecba;
+  border: none;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-left: auto;
+  padding: 0.5em 3.5em;
+  cursor: pointer;
+}
+
+.results-wrapper {
+  max-width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.weather {
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+.js-search-results {
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.results {
+  background-color: #656567;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em;
+  transition: 300ms ease-in-out;
+}
+
+.results:hover {
+  background-color: #545456;
+}
+
+.result-name {
+  color: #ffc107;
+}
+
+@media only screen and (max-width: 1050px) {
+  .video-container {
+    max-width: 100%;
+  }
+  .heading h1 {
+    font-size: 2em;
+    margin-bottom: 2em;
+  }
+  .icon {
+    margin-right: 0.3em;
+    font-size: 2em;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+  }
+
+  .js-search-form > * {
+    margin: 0.8em 0;
+  }
+
+  .js-search-form > label {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .js-search-form > input {
+    background-color: #eee;
+    padding: 0.5em 1em;
+  }
+  .js-search-form > button {
+    margin-left: 0;
+  }
+  .js-search-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .video-container {
+    max-width: 100%;
+  }
+  .heading h1 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  .icon {
+    margin-right: 0.3em;
+    font-size: 1.5em;
+  }
+}
